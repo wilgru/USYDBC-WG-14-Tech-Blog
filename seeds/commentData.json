@@ -1,0 +1,37 @@
+[
+    {
+      "title": "comment 1",
+      "body": "xyz",
+      "dateCreated": "",
+      "onPost": "1",
+      "commentedBy": "1"
+    },
+    {
+      "title": "comment 2",
+      "body": "foo",
+      "dateCreated": "",
+      "onPost": "1",
+      "commentedBy": "1"
+    },
+    {
+      "title": "comment 3",
+      "body": "bar",
+      "dateCreated": "",
+      "onPost": "2",
+      "commentedBy": "2"
+    },
+    {
+      "title": "comment 4",
+      "body": "faz",
+      "dateCreated": "",
+      "onPost": "2",
+      "commentedBy": "3"
+    },
+    {
+      "title": "comment 5",
+      "body": "boo",
+      "dateCreated": "",
+      "onPost": "3",
+      "commentedBy": "3"
+    }
+]

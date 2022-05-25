@@ -1,0 +1,22 @@
+[
+    {
+      "title": "title 1",
+      "body": "abc",
+      "postedBy": "1"
+    },
+    {
+      "title": "title 2",
+      "body": "def",
+      "postedBy": "1"
+    },
+    {
+      "title": "title 3",
+      "body": "ghi",
+      "postedBy": "2"
+    },
+    {
+      "title": "title 3",
+      "body": "jkl",
+      "postedBy": "3"
+    }
+]

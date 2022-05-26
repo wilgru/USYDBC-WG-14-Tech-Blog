@@ -24,8 +24,8 @@
 
                 <div class="col-md-3">
                     <ul class="nav col-12 col-md-auto mb-2 justify-content-end mb-md-0">
-                        {{#if LoggedIn}}
-                        <li><a href="/logout" class="nav-link px-2 link-dark">Log Out</a></li>
+                        {{#if logged_in}}
+                        <li><a href="/" id="logout" class="nav-link px-2 link-secondary">Log Out</a></li>
                         {{else}}
                         <li><a href="/login" class="nav-link px-2 link-secondary">Login</a></li>
                         {{/if}}

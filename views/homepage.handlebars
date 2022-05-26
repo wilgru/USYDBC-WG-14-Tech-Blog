@@ -1,4 +1,4 @@
-<div class="col">
+{{!-- <div class="col">
     <!-- Loop over each object in the posts array -->
     {{#each posts as |post| }}
     <div class="row mb-4 justify-content-center">
@@ -12,6 +12,13 @@
         </div>
     </div>
     {{/each}}
-</div>
+</div> --}}
 
-{{!-- <script src="./js/posts.js"></script> --}}
+<div class="col">
+    <!-- Loop over each object in the posts array -->
+    {{#each posts as |post| }}
+    <div class="row mb-4 justify-content-center">
+        {{> postprev}}
+    </div>
+    {{/each}}
+</div>

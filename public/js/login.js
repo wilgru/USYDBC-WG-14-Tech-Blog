@@ -1,6 +1,6 @@
-const form = document.querySelector('.form-login');
+const form = document.getElementById('form-login');
 
-const loginFormHandler = async (event) => {
+const formHandler = async (event) => {
     event.preventDefault();
     console.log("JHHHJK")
     let emptyField = false;
@@ -25,16 +25,16 @@ const loginFormHandler = async (event) => {
 
     const loginStatus = await fetch('/api/users/login', {
         method: 'POST',
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email: emailVal, password: passwordVal }),
         headers: { 'Content-Type': 'application/json' }
       });
 
     if (!loginStatus.ok) {
         alert(loginStatus.statusText);
         return;
+    } else {
+        window.location = '/dashboard';
     }
-
-    window.location = '/dashboard';
-    // document.location.replace('/profile');
 }
-form.addEventListener('submit', loginFormHandler);
+
+form.addEventListener('submit', formHandler);

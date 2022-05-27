@@ -2,7 +2,7 @@
     border: 2px solid black;
 } */
 
-.form-signup, .form-login {
+.form-resize {
     max-width: 330px;
     padding: 15px;
 }

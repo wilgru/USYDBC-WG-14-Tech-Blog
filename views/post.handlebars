@@ -1,15 +1,14 @@
 <div class="col">
-    <!-- Loop over each object in the posts array -->
     <div class="row mb-4 justify-content-center">
         <div class="col-md-8 post ">
             <h1>{{post.title}}</h1>
             <h6 class="card-subtitle mb-2 text-muted" style="font-size: 12px;">
-                Posted By {{#if isThisUser}}you{{else}}{{post.user.name}}{{/if}}, 00/00/0000
+                Posted By {{#if post.isThisUser}}you{{else}}{{post.user.name}}{{/if}}, 00/00/0000
             </h6>
 
             <p>{{post.body}}</p>
 
-            {{#if post.isThisUser}}<a href="/" class="card-link">Edit Post</a>{{/if}}
+            {{#if post.isThisUser}}<a href="/post/edit/{{post.id}}" class="card-link">Edit Post</a>{{/if}}
         </div>
     </div>
     <div class="row mb-4 justify-content-center">
@@ -24,7 +23,7 @@
         </div>
         {{#if logged_in}}
         <div class="row mb-4 justify-content-center">
-            <a href="/newpost" class=" col-md-8 btn btn-primary">Leave a comment</a>
+            <a href="/comment/new/{{post.id}}" class=" col-md-8 btn btn-primary">Leave a comment</a>
         </div>
         {{/if}}
     </div>

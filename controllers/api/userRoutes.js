@@ -30,7 +30,6 @@ router.post('/login', async (req, res) => {
             req.session.logged_in = true; //<-- potential bug
             
             res.json({ user: user, message: 'You are now logged in!' });
-            console.log(req.session.logged_in)
         });
     } catch (error) {
         res.status(500).send(error);
@@ -39,15 +38,8 @@ router.post('/login', async (req, res) => {
 
 router.post('/signup', async (req, res) => {
     try {
-
-        console.log(req.body)
-
         const newUserData = await User.create(req.body);
         const newUser = newUserData.get({ plain: true});
-
-        console.log('\n\n');
-        console.log(newUserData);
-        console.log('\n\n');
         
         req.session.save(() => {
             req.session.user_id = newUser.id;
@@ -59,11 +51,6 @@ router.post('/signup', async (req, res) => {
         });
 
     } catch (error) {
-        // console.log('\n\n');
-        // console.log(error.name);
-        // console.log(error.errors[0]);
-        // console.log(error.errors[0].path === 'email');
-
         if (error.name === "SequelizeUniqueConstraintError" && error.errors[0].path === 'email') {
             res.status(400).send({message: "A user with this email already exists."});
         } else {
@@ -75,10 +62,10 @@ router.post('/signup', async (req, res) => {
 router.post('/logout', async (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
-            res.status(204).render('homepage', {logged_in: false});
+            res.status(204).redirect('/');
         })
     } else {
-        res.status(404).render('homepage');
+        res.status(404).redirect('/');
     }
 });
 

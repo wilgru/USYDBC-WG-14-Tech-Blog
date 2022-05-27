@@ -1,0 +1,19 @@
+<div class="col">
+    <div class="row mb-4 justify-content-center">
+        <h1 style="padding: 0; width:fit-content;">
+            Edit Comment
+        </h1>
+    </div>
+    <div class="row mb-4 justify-content-center">
+        <form class="col-8" id="form-new-comment">
+            <div class="w-100 mb-3" style="padding: 0;">
+                <label for="body-input" class="form-label">Body</label>
+                <textarea class="form-control" id="body-input" rows="3">{{comment.body}}</textarea>
+            </div>
+            <button class="w-100  mb-4 btn btn-lg btn-primary" type="submit">Update</button>
+            <button class="w-100 btn btn-lg btn-danger" id="delete-comment">Delete</button>
+        </form> 
+    </div>
+</div>
+
+<script src="../../js/editcomment.js"></script>

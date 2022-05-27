@@ -1,9 +1,9 @@
 <div class="w-100 card">
     <div class="card-body">
-        <h6 class="card-title" style="font-size: 16px;">{{#if isThisUser}}you{{else}}{{user.name}}{{/if}} <span class="card-subtitle mb-2 text-muted" style="font-size: 12px;">00/00/0000</span></h5>
+        <h6 class="card-title" style="font-size: 16px;">{{#if commentedByThisUser}}you{{else}}{{user.name}}{{/if}} <span class="card-subtitle mb-2 text-muted" style="font-size: 12px;">00/00/0000</span></h5>
         <p class="card-text">{{body}}</p>
-        {{#if isThisUser}}
-        <a href="/" class="card-link">Edit Post</a>
+        {{#if commentedByThisUser}}
+        <a href="/comment/edit/{{id}}" class="card-link">Edit comment</a>
         {{/if}}
     </div>
 </div>

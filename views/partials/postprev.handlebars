@@ -1,12 +1,12 @@
 <div class="col-md-8 post card">
     <div class="card-body">
-        <h5 class="card-title"><a href="/post/{{id}}">{{title}}</a> <span style="font-size: 12px;"> By {{#if isThisUser}}you{{else}}{{user.name}}{{/if}}</span></h5>
+        <h5 class="card-title"><a href="/post/view/{{id}}">{{title}}</a> <span style="font-size: 12px;"> By {{#if isThisUser}}you{{else}}{{user.name}}{{/if}}</span></h5>
         <h6 class="card-subtitle mb-2 text-muted" style="font-size: 12px;">
             Posted 00/00/0000
         </h6>
         <p class="card-text">{{body}}</p>
         {{#if isThisUser}}
-        <a href="/" class="card-link">Edit Post</a>
+        <a href="/post/edit/{{id}}" class="card-link">Edit Post</a>
         {{/if}}
     </div>
 </div>

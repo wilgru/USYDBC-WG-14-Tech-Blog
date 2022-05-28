@@ -2,35 +2,35 @@
     {
       "title": "comment 1",
       "body": "xyz",
-      "dateCreated": "",
+      "date": "2022-05-28",
       "onPost": "1",
       "commentedBy": "1"
     },
     {
       "title": "comment 2",
       "body": "foo",
-      "dateCreated": "",
+      "date": "2022-05-28",
       "onPost": "1",
       "commentedBy": "1"
     },
     {
       "title": "comment 3",
       "body": "bar",
-      "dateCreated": "",
+      "date": "2022-05-28",
       "onPost": "2",
       "commentedBy": "2"
     },
     {
       "title": "comment 4",
       "body": "faz",
-      "dateCreated": "",
+      "date": "2022-05-28",
       "onPost": "2",
       "commentedBy": "3"
     },
     {
       "title": "comment 5",
       "body": "boo",
-      "dateCreated": "",
+      "date": "2022-05-28",
       "onPost": "3",
       "commentedBy": "3"
     }

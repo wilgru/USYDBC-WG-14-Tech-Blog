@@ -2,21 +2,25 @@
     {
       "title": "title 1",
       "body": "abc",
+      "date": "2022-05-28",
       "postedBy": "1"
     },
     {
       "title": "title 2",
       "body": "def",
+      "date": "2022-05-28",
       "postedBy": "1"
     },
     {
       "title": "title 3",
       "body": "ghi",
+      "date": "2022-05-28",
       "postedBy": "2"
     },
     {
       "title": "title 3",
       "body": "jkl",
+      "date": "2022-05-28",
       "postedBy": "3"
     }
 ]

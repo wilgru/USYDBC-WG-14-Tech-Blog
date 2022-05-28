@@ -2,7 +2,7 @@
     <div class="card-body">
         <h5 class="card-title"><a href="/post/view/{{id}}">{{title}}</a> <span style="font-size: 12px;"> By {{#if isThisUser}}you{{else}}{{user.name}}{{/if}}</span></h5>
         <h6 class="card-subtitle mb-2 text-muted" style="font-size: 12px;">
-            Posted 00/00/0000
+            Posted {{date}}
         </h6>
         <p class="card-text">{{body}}</p>
         {{#if isThisUser}}

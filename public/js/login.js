@@ -30,7 +30,8 @@ const formHandler = async (event) => {
       });
 
     if (!loginStatus.ok) {
-        alert(loginStatus.statusText);
+        let data = await loginStatus.json();
+        alert(data.message);
         return;
     } else {
         window.location = '/dashboard';

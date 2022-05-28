@@ -46,7 +46,8 @@ const deleteHandler = async (event) => {
         alert(commentStatus.statusText);
         return;
     } else {
-        window.location = `/post/view/${commentStatus.post}`;
+        let data = await commentStatus.json();
+        window.location = `/post/view/${data.post}`;
     }
 }
 

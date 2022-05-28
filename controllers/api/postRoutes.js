@@ -5,6 +5,9 @@ router.post('/', async (req, res) => {
     try {
         const createData = req.body;
         createData.postedBy = req.session.user_id;
+        createData.date = new Date();
+
+        console.log(createData);
 
         const newPostData = await Post.create(createData);
         const newPost = newPostData.get({ plain: true});

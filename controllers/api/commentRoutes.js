@@ -6,6 +6,7 @@ router.post('/:postid', async (req, res) => {
         const createData = req.body;
         createData.onPost = parseInt(req.params.postid);
         createData.commentedBy = req.session.user_id;
+        createData.date = new Date();
 
         console.log(createData);
 
@@ -31,9 +32,9 @@ router.put('/:commentid', async (req, res) => {
             }
         });
 
-        const commenti = commentData.get({ plain: true});
+        const comment = commentData.get({ plain: true});
 
-        if (commenti.commentedBy != req.session.user_id) {
+        if (comment.commentedBy != req.session.user_id) {
             res.status(403).redirect('/');
             return;
         }
@@ -43,8 +44,9 @@ router.put('/:commentid', async (req, res) => {
           });
 
         await commentData.save();
+        console.log(comment.onPost);
         
-        res.json({ message: 'Comment edited successfully!' });
+        res.json({ post: comment.onPost, message: 'Comment edited successfully!' });
 
     } catch (error) {
         if (error.name === "SequelizeUniqueConstraintError" && error.errors[0].path === 'email') {
@@ -57,22 +59,22 @@ router.put('/:commentid', async (req, res) => {
 
 router.delete('/:commentid', async (req, res) => {
     try {
-        const PostData = await Post.findOne({
+        const commentData = await Comment.findOne({
             where: {
                 id: req.params.commentid
             }
         });
 
-        const posti = PostData.get({ plain: true});
+        const comment = commentData.get({ plain: true});
 
-        if (posti.postedBy != req.session.user_id) {
+        if (comment.commentedBy != req.session.user_id) {
             res.status(403).redirect('/');
             return;
         }
 
-        await PostData.destroy();
+        await commentData.destroy();
         
-        res.json({ message: 'Post deleted successfully!' });
+        res.json({ post: comment.onPost, message: 'Comment deleted successfully!' });
 
     } catch (error) {
         if (error.name === "SequelizeUniqueConstraintError" && error.errors[0].path === 'email') {

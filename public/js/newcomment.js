@@ -3,7 +3,7 @@ const form = document.getElementById('form-new-comment');
 const formHandler = async (event) => {
     event.preventDefault();
 
-    // Collect values from the login form
+    // Collect values from the form
     const body = document.querySelector('#body-input');
     const bodyVal = body.value.trim();
 

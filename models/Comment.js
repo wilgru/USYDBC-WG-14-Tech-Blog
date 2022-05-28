@@ -18,12 +18,12 @@ Comment.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        // dateCreated: {
-        //     // potential bug, DATE type
-        //     type: DataTypes.DATE,
-        //     allowNull: false,
-        //     validate: {}
-        // },
+        date: {
+            // potential bug, DATE type
+            type: DataTypes.DATEONLY,
+            allowNull: false,
+            // validate: {}
+        },
         onPost: {
             type: DataTypes.INTEGER,
             allowNull: false,

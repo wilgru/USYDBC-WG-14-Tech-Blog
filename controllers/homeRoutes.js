@@ -69,7 +69,7 @@ router.get('/post/view/:postid', async (req, res) => {
             },
             {
               model: Comment,
-              attributes: ['id', 'body'],
+              attributes: ['id', 'body', 'date'],
               include: [
                   {
                       model: User,

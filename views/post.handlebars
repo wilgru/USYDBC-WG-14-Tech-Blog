@@ -3,7 +3,7 @@
         <div class="col-md-8 post ">
             <h1>{{post.title}}</h1>
             <h6 class="card-subtitle mb-2 text-muted" style="font-size: 12px;">
-                Posted By {{#if post.isThisUser}}you{{else}}{{post.user.name}}{{/if}}, {{post.date}}
+                Posted By {{#if post.isThisUser}}you{{else}}{{post.user.name}}{{/if}}, {{format_date post.date}}
             </h6>
 
             <p>{{post.body}}</p>

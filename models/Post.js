@@ -19,7 +19,7 @@ Post.init(
             allowNull: false
         },
         body: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false
         },
         date: {
@@ -39,11 +39,6 @@ Post.init(
     },
     {
         hooks: {
-            beforeCreate: async (newPostData) => {
-                // CREATE TIME STAMP FOR dateCreated here maybe?
-                // newPostData.dateCreated = sequelize
-                return newPostData;
-            }
         },
         sequelize,
         timestamps: false,

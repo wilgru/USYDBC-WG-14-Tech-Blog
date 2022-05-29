@@ -15,7 +15,7 @@ Comment.init(
             autoIncrement: true
         },
         body: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false
         },
         date: {
@@ -36,7 +36,7 @@ Comment.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'post',
+                model: 'user',
                 key: 'id',
             }
         }

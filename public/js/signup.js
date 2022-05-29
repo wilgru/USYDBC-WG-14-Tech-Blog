@@ -51,11 +51,11 @@ const formHandler = async (event) => {
       });
 
     if (!loginStatus.ok) {
-        alert(loginStatus.statusText);
+        let data = await loginStatus.json();
+        alert(data.message);
         return;
     }
 
     window.location = '/dashboard';
-    // document.location.replace('/profile');
 }
 form.addEventListener('submit', formHandler);

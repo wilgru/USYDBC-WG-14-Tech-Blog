@@ -1,26 +1,30 @@
 [
     {
-      "title": "title 1",
-      "body": "abc",
-      "date": "2022-05-28",
+      "id": "1",
+      "title": "Some Lesser-Known Git Commands and Tricks",
+      "body": "Nowadays, Git is the software industrys default source code management solution — every software development team tends to use Git and remote Git hosting services for maintaining their codebases. Developers use various unique ways to work with Git-based...",
+      "date": "2022-02-24",
       "postedBy": "1"
     },
     {
-      "title": "title 2",
-      "body": "def",
-      "date": "2022-05-28",
+      "id": "2",
+      "title": "3 Rookie Mistakes to Avoid with Python Lists",
+      "body": "Here are 3 mistakes to watch out for when working with lists: \n\n 1. Creating Copies of Lists with Equals Operator \n 2. Changing List Size While Iterating \n 3. Not Using List Comprehension to Create Lists",
+      "date": "2022-02-28",
       "postedBy": "1"
     },
     {
-      "title": "title 3",
-      "body": "ghi",
-      "date": "2022-05-28",
+      "id": "3",
+      "title": "The 5 Programming Languages You'll Ever Need",
+      "body": "Hey everyone! Programming is one of the best skillsets to have nowadays, but many people are unsure as to which programming language they should learn, so, let's take a look at 5 different programming languages that you'll probably ever need!",
+      "date": "2022-03-02",
       "postedBy": "2"
     },
     {
-      "title": "title 3",
-      "body": "jkl",
-      "date": "2022-05-28",
+      "id": "4",
+      "title": "C# Foreach loop Tutorial & Tips",
+      "body": "Foreach loop is a type of loop that is quite similar to the for loop however, it is simpler and easier to use and is mostly used for simple tasks. \n\n Foreach loop is a way to run a loop one time for each value in a certain list.",
+      "date": "2022-03-30",
       "postedBy": "3"
     }
 ]

@@ -3,7 +3,7 @@ const deleteButton = document.getElementById('delete-post');
 
 const formHandler = async (event) => {
     event.preventDefault();
-    console.log("JHHHJK")
+
     let emptyField = false;
 
     // Collect values from the login form

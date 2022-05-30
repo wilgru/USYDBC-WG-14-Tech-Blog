@@ -24,9 +24,9 @@ const formHandler = async (event) => {
     if (!commentStatus.ok) {
         alert(commentStatus.statusText);
         return;
-    } else {
-        window.location = `/post/view/${postId}`;
-    }
+    } 
+    
+    window.location = `/post/view/${postId}`;
 }
 
 form.addEventListener('submit', formHandler);

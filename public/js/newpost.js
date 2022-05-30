@@ -23,18 +23,18 @@ const formHandler = async (event) => {
 
     if (emptyField) return;
 
-    const loginStatus = await fetch('/api/posts/', {
+    const postStatus = await fetch('/api/posts/', {
         method: 'POST',
         body: JSON.stringify({ title: titleVal, body: bodyVal }),
         headers: { 'Content-Type': 'application/json' }
       });
 
-    if (!loginStatus.ok) {
-        alert(loginStatus.statusText);
+    if (!postStatus.ok) {
+        alert(postStatus.statusText);
         return;
-    } else {
-        window.location = '/dashboard';
     }
+
+    window.location = '/dashboard';
 }
 
 form.addEventListener('submit', formHandler);

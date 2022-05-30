@@ -27,22 +27,18 @@ const formHandler = async (event) => {
     const urlItems = window.location.href.split('/')
     const postId = urlItems[urlItems.length - 1]
 
-    const loginStatus = await fetch(`/api/posts/${postId}`, {
+    const postStatus = await fetch(`/api/posts/${postId}`, {
         method: 'PUT',
         body: JSON.stringify({ title: titleVal, body: bodyVal }),
         headers: { 'Content-Type': 'application/json' }
-      });
+    });
 
-
-      console.log("EHHRE")
-
-    if (!loginStatus.ok) {
-        alert(loginStatus.statusText);
-        console.log(loginStatus)
+    if (!postStatus.ok) {
+        alert(postStatus.statusText);
         return;
-    } else {
-        window.location = '/dashboard';
-    }
+    } 
+
+    window.location = '/dashboard';
 }
 
 const deleteHandler = async (event) => {
@@ -51,17 +47,17 @@ const deleteHandler = async (event) => {
     const urlItems = window.location.href.split('/')
     const postId = urlItems[urlItems.length - 1]
 
-    const loginStatus = await fetch(`/api/posts/${postId}`, {
+    const postStatus = await fetch(`/api/posts/${postId}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' }
       });
 
-    if (!loginStatus.ok) {
-        alert(loginStatus.statusText);
+      if (!postStatus.ok) {
+        alert(postStatus.statusText);
         return;
-    } else {
-        window.location = '/dashboard';
     }
+
+    window.location = '/dashboard';
 }
 
 form.addEventListener('submit', formHandler);

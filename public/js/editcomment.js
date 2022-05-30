@@ -25,10 +25,10 @@ const formHandler = async (event) => {
     if (!commentStatus.ok) {
         alert(commentStatus.statusText);
         return;
-    } else {
-        let data = await commentStatus.json();
-        window.location = `/post/view/${data.post}`;
-    }
+    } 
+    
+    let data = await commentStatus.json();
+    window.location = `/post/view/${data.post}`;
 }
 
 const deleteHandler = async (event) => {
@@ -45,10 +45,10 @@ const deleteHandler = async (event) => {
     if (!commentStatus.ok) {
         alert(commentStatus.statusText);
         return;
-    } else {
-        let data = await commentStatus.json();
-        window.location = `/post/view/${data.post}`;
-    }
+    } 
+
+    let data = await commentStatus.json();
+    window.location = `/post/view/${data.post}`;
 }
 
 form.addEventListener('submit', formHandler);

@@ -33,9 +33,9 @@ const formHandler = async (event) => {
         let data = await loginStatus.json();
         alert(data.message);
         return;
-    } else {
-        window.location = '/dashboard';
     }
+
+    window.location = '/dashboard';
 }
 
 form.addEventListener('submit', formHandler);

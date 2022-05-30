@@ -26,7 +26,6 @@ Post.init(
             // potential bug, DATE type
             type: DataTypes.DATEONLY,
             allowNull: false,
-            // validate: {}
         },
         postedBy: {
             type: DataTypes.INTEGER,
@@ -38,8 +37,6 @@ Post.init(
         }
     },
     {
-        hooks: {
-        },
         sequelize,
         timestamps: false,
         freezeTableName: true,

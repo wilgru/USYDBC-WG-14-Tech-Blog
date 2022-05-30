@@ -51,7 +51,7 @@ make sure you have all dependencies installed and have created your own local .e
 <a name="Link"></a>
 ## Link
 
-You can visit the deployed Tech Blog [here](https://drive.google.com/file/d/1gfxpNGyqjZV-zxyJHhJ3N7Nlo2BHTzI-/view?usp=sharing).
+You can visit the deployed Tech Blog [here](https://usydbc-14-tech-blog.herokuapp.com/).
 
 <a name="License"></a>
 ## License

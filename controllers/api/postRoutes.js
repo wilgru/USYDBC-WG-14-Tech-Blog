@@ -7,23 +7,13 @@ router.post('/', async (req, res) => {
         createData.postedBy = req.session.user_id;
         createData.date = new Date();
 
-        console.log(createData);
-
         const newPostData = await Post.create(createData);
         const newPost = newPostData.get({ plain: true});
-
-        console.log('\n\n');
-        console.log(newPost);
-        console.log('\n\n');
         
         res.json({ user: newPost, message: 'Posted successfully!' });
 
     } catch (error) {
-        if (error.name === "SequelizeUniqueConstraintError" && error.errors[0].path === 'email') {
-            res.status(400).send({message: "A user with this email already exists."});
-        } else {
-            res.status(500).send(error);
-        }
+        res.status(500).send(error);
     }
 });
 
@@ -52,11 +42,7 @@ router.put('/:postid', async (req, res) => {
         res.json({ message: 'Post edited successfully!' });
 
     } catch (error) {
-        if (error.name === "SequelizeUniqueConstraintError" && error.errors[0].path === 'email') {
-            res.status(400).send({message: "A user with this email already exists."});
-        } else {
-            res.status(500).send(error);
-        }
+        res.status(500).send(error);
     }
 });
 
@@ -80,11 +66,7 @@ router.delete('/:postid', async (req, res) => {
         res.json({ message: 'Post deleted successfully!' });
 
     } catch (error) {
-        if (error.name === "SequelizeUniqueConstraintError" && error.errors[0].path === 'email') {
-            res.status(400).send({message: "A user with this email already exists."});
-        } else {
-            res.status(500).send(error);
-        }
+        res.status(500).send(error);
     }
 });
 

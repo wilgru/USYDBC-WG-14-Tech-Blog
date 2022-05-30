@@ -42,13 +42,6 @@ Comment.init(
         }
     },
     {
-        hooks: {
-            beforeCreate: async (newCommentData) => {
-                // CREATE TIME STAMP FOR dateCreated here maybe?
-                // newCommentData.dateCreated = sequelize
-                return newCommentData;
-            }
-        },
         sequelize,
         timestamps: false,
         freezeTableName: true,

@@ -16,11 +16,7 @@ router.post('/:postid', async (req, res) => {
         res.json({ user: newComment, message: 'Commented successfully!' });
 
     } catch (error) {
-        if (error.name === "SequelizeUniqueConstraintError" && error.errors[0].path === 'email') {
-            res.status(400).send({message: "A user with this email already exists."});
-        } else {
-            res.status(500).send(error);
-        }
+        res.status(500).send(error);
     }
 });
 
@@ -49,11 +45,7 @@ router.put('/:commentid', async (req, res) => {
         res.json({ post: comment.onPost, message: 'Comment edited successfully!' });
 
     } catch (error) {
-        if (error.name === "SequelizeUniqueConstraintError" && error.errors[0].path === 'email') {
-            res.status(400).send({message: "A user with this email already exists."});
-        } else {
-            res.status(500).send(error);
-        }
+        res.status(500).send(error);
     }
 });
 
@@ -77,11 +69,7 @@ router.delete('/:commentid', async (req, res) => {
         res.json({ post: comment.onPost, message: 'Comment deleted successfully!' });
 
     } catch (error) {
-        if (error.name === "SequelizeUniqueConstraintError" && error.errors[0].path === 'email') {
-            res.status(400).send({message: "A user with this email already exists."});
-        } else {
-            res.status(500).send(error);
-        }
+        res.status(500).send(error);
     }
 });
 

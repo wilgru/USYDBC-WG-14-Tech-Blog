@@ -1,3 +1,14 @@
+.alert {
+    opacity: 0;
+    margin: 2px;
+}
+
+#alert-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .form-resize {
     max-width: 330px;
     padding: 15px;

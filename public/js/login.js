@@ -1,4 +1,22 @@
 const form = document.getElementById('form-login');
+const alertBox = document.getElementById('alert-box');
+
+// custom banner for temporary alerts
+const mainAlert = (message) => {
+    let alertBanner = document.createElement('div');
+    alertBanner.classList = ['alert alert-danger col-4'];
+    alertBanner.id = 'alert-banner';
+
+    alertBanner.innerText = message;
+    alertBox.append(alertBanner);
+
+    alertBanner.style.opacity = 1;
+  
+    setTimeout(()=>{
+        alertBanner.style.opacity = 0;
+        alertBox.removeChild(alertBanner);
+    }, 2000)
+}
 
 const formHandler = async (event) => {
     event.preventDefault();
@@ -12,12 +30,14 @@ const formHandler = async (event) => {
     const passwordVal = password.value.trim();
 
     if (!emailVal) {
-        email.style.backgroundColor = "lightcoral";
+        email.style.borderColor = "lightcoral";
+        mainAlert("Email cannot be empty");
         emptyField = true
     } 
 
     if (!passwordVal) {
-        password.style.backgroundColor = "lightcoral";
+        password.style.borderColor = "lightcoral";
+        mainAlert("Password cannot be empty");
         emptyField = true
     } 
 
@@ -31,7 +51,7 @@ const formHandler = async (event) => {
 
     if (!loginStatus.ok) {
         let data = await loginStatus.json();
-        alert(data.message);
+        mainAlert(data.message);
         return;
     }
 

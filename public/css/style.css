@@ -1,3 +1,39 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+
+}
+
+a {
+    font-weight: bold!important;
+    color: mediumseagreen!important;
+}
+
+a:hover {
+    color: darkseagreen!important;
+}
+
+.btn {
+    background-color: mediumseagreen!important;
+    border: 1px black solid!important;
+    color: black!important;
+    font-weight: normal!important;
+}
+
+.btn:hover {
+    background-color: darkseagreen!important;
+}
+
+.btn-danger {
+    background-color: salmon!important;
+}
+
+.btn-danger:hover {
+    background-color: darksalmon!important;
+}
+
 .alert {
     opacity: 0;
     margin: 2px;
@@ -10,8 +46,12 @@
 }
 
 .form-resize {
-    max-width: 330px;
+    max-width: 400px;
     padding: 15px;
+}
+
+input, textarea {
+    border: 1px black solid!important;
 }
 
 .m-auto {
@@ -20,4 +60,9 @@
 
 .w-100 {
     width: 100%!important;
+}
+
+.card {
+    border: 2px black solid!important;
+    box-shadow: 4px 4px black!important;
 }

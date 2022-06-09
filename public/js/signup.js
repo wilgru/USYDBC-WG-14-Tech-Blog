@@ -24,10 +24,10 @@ const formHandler = async (event) => {
     let emptyField = false;
 
     // Collect values from the login form
-    const name = document.querySelector('#name-input');
-    const email = document.querySelector('#email-input');
-    const password = document.querySelector('#password-input');
-    const confirmPassword = document.querySelector('#confirm-password-input');
+    const name = document.getElementById('name-input');
+    const email = document.getElementById('email-input');
+    const password = document.getElementById('password-input');
+    const confirmPassword = document.getElementById('confirm-password-input');
 
     const nameVal = name.value.trim();
     const emailVal = email.value.trim();

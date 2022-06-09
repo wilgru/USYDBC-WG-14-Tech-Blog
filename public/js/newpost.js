@@ -6,8 +6,8 @@ const formHandler = async (event) => {
     let emptyField = false;
 
     // Collect values from the login form
-    const title = document.querySelector('#title-input');
-    const body = document.querySelector('#body-input');
+    const title = document.getElementById('title-input');
+    const body = document.getElementById('body-input');
     const titleVal = title.value.trim();
     const bodyVal = body.value.trim();
 

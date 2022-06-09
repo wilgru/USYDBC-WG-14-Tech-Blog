@@ -4,7 +4,7 @@ const formHandler = async (event) => {
     event.preventDefault();
 
     // Collect values from the form
-    const body = document.querySelector('#body-input');
+    const body = document.getElementById('body-input');
     const bodyVal = body.value.trim();
 
     if (!bodyVal) {

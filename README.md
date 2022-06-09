@@ -4,7 +4,7 @@
 
 ## Description
 
-This website is a a fully functional, full-stack tech blog, where you can create an account, post, comment and edit previous posts and comments.
+This website is a fully functional, full-stack tech blog, where you can create an account, post, comment and edit previous posts and comments.
 
 ## Table of Contents
  

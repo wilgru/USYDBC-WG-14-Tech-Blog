@@ -1,6 +1,7 @@
 <div class="col">
+    <link rel="stylesheet" href="./css/style.css">
     <div class="row mb-4 justify-content-center">
-        <div class="col-md-8 post ">
+        <div class="col-md-8 post">
             <h1>{{post.title}}</h1>
             <h6 class="card-subtitle mb-2 text-muted" style="font-size: 12px;">
                 Posted By {{#if post.isThisUser}}you{{else}}{{post.user.name}}{{/if}}, {{format_date post.date}}
@@ -14,7 +15,6 @@
     <div class="row mb-4 justify-content-center">
         <div class="col-md-8 post">
             <h5>Comments</h5>
-            
             {{#each post.comments}}
             <div class="row mb-4 justify-content-center">
                 {{> comment}}
@@ -23,7 +23,7 @@
         </div>
         {{#if logged_in}}
         <div class="row mb-4 justify-content-center">
-            <a href="/comment/new/{{post.id}}" class=" col-md-8 btn btn-primary">Leave a comment</a>
+            <a href="/comment/new/{{post.id}}" class=" col-md-8 btn">Leave a comment</a>
         </div>
         {{/if}}
     </div>
